@@ -1,0 +1,13 @@
+<% @comments.each do |comment| %>
+        <!-- Post One -->
+        <div class="row">
+            <div class="col-md-5">
+                <h3><%= comment.title %></h3>
+                <p><%= simple_format(comment.comment_text) %></p>
+                <a class="btn btn-primary" href="<%= comment_path(post.id) %>">View all comment<span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+        <%= link_to 'back to post',@post %>
+        <hr>
+      <% end %>
